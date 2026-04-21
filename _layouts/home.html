@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="hero-field" aria-hidden="true">
+    <span class="track t1"></span>
+    <span class="track t2"></span>
+    <span class="track t3"></span>
+    <span class="particle p1"></span>
+    <span class="particle p2"></span>
+    <span class="particle p3"></span>
+  </div>
+  <div class="wrap hero-content">
+    <p class="eyebrow">Física de partículas</p>
+    <h1>{{ site.title }}</h1>
+    <p>Um blog para registrar leituras, explicações, fichamentos e avanços do TCC sobre neutrinos, mistura de sabores e física além da formulação mínima do Modelo Padrão.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="#posts">Ler posts</a>
+      <a class="button secondary" href="{{ "/sobre/" | relative_url }}">Ver estrutura</a>
+    </div>
+  </div>
+</section>
+
+<section class="intro-grid wrap" aria-label="Eixos do projeto">
+  <article>
+    <span>01</span>
+    <h2>Base teórica</h2>
+    <p>Partículas elementares, léptons, interações fracas e o lugar dos neutrinos no Modelo Padrão.</p>
+  </article>
+  <article>
+    <span>02</span>
+    <h2>Oscilação</h2>
+    <p>Estados de sabor, estados de massa, matriz PMNS e probabilidade de transição.</p>
+  </article>
+  <article>
+    <span>03</span>
+    <h2>Limites do modelo</h2>
+    <p>Por que neutrinos massivos indicam uma extensão da formulação mínima do Modelo Padrão.</p>
+  </article>
+</section>
+
+<section class="posts-section" id="posts">
+  <div class="wrap section-heading">
+    <p class="eyebrow">Caderno de pesquisa</p>
+    <h2>Posts recentes</h2>
+  </div>
+  <div class="post-list wrap">
+    {% for post in site.posts %}
+      <article class="post-card">
+        <div>
+          <p class="post-card-meta">{{ post.date | date: "%d/%m/%Y" }} · {{ post.categories | join: ", " }}</p>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
+        </div>
+        <a class="read-more" href="{{ post.url | relative_url }}">Continuar leitura</a>
+      </article>
+    {% endfor %}
+  </div>
+</section>

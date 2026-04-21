@@ -1,0 +1,41 @@
+title: "Oscilação de neutrinos e os limites do Modelo Padrão"
+description: "Blog acadêmico sobre física de partículas, oscilação de neutrinos e as fronteiras do Modelo Padrão."
+lang: pt-BR
+timezone: America/Sao_Paulo
+url: "https://rafaellunardi.github.io"
+baseurl: "/oscilacao-neutrinos-modelo-padrao"
+
+author:
+  name: "Rafael Lunardi"
+
+permalink: /:categories/:year/:month/:day/:title/
+paginate: 6
+
+collections:
+  pages:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: "Rafael Lunardi"
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  input: GFM
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md

@@ -6,7 +6,7 @@ url: "https://rafaellunardi.github.io"
 baseurl: "/oscilacao-neutrinos-modelo-padrao"
 
 author:
-  name: "Rafael Lunardi"
+  name: "Rafael Marques"
 
 permalink: /:categories/:year/:month/:day/:title/
 paginate: 6
@@ -21,7 +21,7 @@ defaults:
       type: "posts"
     values:
       layout: post
-      author: "Rafael Lunardi"
+      author: "Rafael Marques"
   - scope:
       path: ""
     values:

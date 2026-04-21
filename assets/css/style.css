@@ -157,6 +157,7 @@ a:hover {
 
 .hero-author strong {
   color: var(--accent);
+  margin-left: 0.35em;
 }
 
 .eyebrow {

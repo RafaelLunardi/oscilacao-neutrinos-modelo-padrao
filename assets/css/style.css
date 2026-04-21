@@ -479,34 +479,201 @@ a:hover {
 }
 
 @media (max-width: 840px) {
+  .wrap,
+  .narrow {
+    width: min(100% - 28px, 680px);
+  }
+
   .site-header {
     align-items: flex-start;
     flex-direction: column;
-    padding: 14px 20px;
+    gap: 12px;
+    padding: 12px 14px;
+  }
+
+  .brand {
+    max-width: 100%;
+    font-size: 0.92rem;
+  }
+
+  .brand-mark {
+    flex-basis: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.88rem;
   }
 
   .site-nav {
-    justify-content: flex-start;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    justify-content: stretch;
+    font-size: 0.86rem;
+  }
+
+  .site-nav a {
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: rgba(17, 23, 33, 0.72);
+    text-align: center;
   }
 
   .hero {
-    min-height: 72vh;
+    min-height: auto;
   }
 
   .hero-content {
-    padding-block: 58px 92px;
+    padding-block: 46px 64px;
+  }
+
+  .hero h1,
+  .page-hero h1,
+  .post-hero h1 {
+    max-width: 100%;
+    font-size: clamp(2.2rem, 13vw, 4rem);
+    line-height: 1.03;
+  }
+
+  .hero p:not(.eyebrow) {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .hero .hero-author {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .button {
+    flex: 1 1 180px;
   }
 
   .intro-grid,
   .post-list {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .intro-grid {
+    padding: 22px 0;
   }
 
   .intro-grid article {
     min-height: 180px;
+    padding: 22px;
+  }
+
+  .intro-grid h2 {
+    margin-top: 28px;
+  }
+
+  .posts-section,
+  .content-band {
+    padding: 42px 0 56px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+
+  .post-card {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .post-card h3 {
+    font-size: 1.45rem;
+  }
+
+  .page-hero,
+  .post-hero {
+    padding: 48px 0 36px;
+  }
+
+  .prose {
+    font-size: 1.08rem;
+  }
+
+  .prose h2 {
+    font-size: 1.65rem;
+  }
+
+  .prose table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    padding: 22px 14px;
   }
 
   .track {
     width: 80vw;
+  }
+}
+
+@media (max-width: 420px) {
+  .wrap,
+  .narrow {
+    width: min(100% - 22px, 680px);
+  }
+
+  .site-header {
+    position: static;
+  }
+
+  .brand {
+    font-size: 0.84rem;
+  }
+
+  .site-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding-block: 38px 52px;
+  }
+
+  .hero h1,
+  .page-hero h1,
+  .post-hero h1 {
+    font-size: 2.18rem;
+  }
+
+  .hero .hero-author {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .intro-grid article,
+  .post-card {
+    padding: 18px;
   }
 }

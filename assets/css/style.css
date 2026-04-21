@@ -138,6 +138,27 @@ a:hover {
   font-size: 1.16rem;
 }
 
+.hero .hero-author {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  margin-top: 22px;
+  padding: 10px 14px;
+  border: 1px solid rgba(72, 214, 210, 0.42);
+  border-radius: var(--radius);
+  background: rgba(17, 23, 33, 0.82);
+  color: var(--ink);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 0 24px rgba(72, 214, 210, 0.08);
+}
+
+.hero-author strong {
+  color: var(--accent);
+}
+
 .eyebrow {
   margin: 0 0 14px;
   color: var(--accent-2);
